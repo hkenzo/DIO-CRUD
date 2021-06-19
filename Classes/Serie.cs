@@ -14,11 +14,11 @@ namespace DIO.Series
 
         private bool Excluido { get; set; }
 
-        public Serie (int id, Genero genero, string tituto, string descricao, int ano)
+        public Serie (int id, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
             this.Genero = genero;
-            this.Titulo = tituto;
+            this.Titulo = titulo;
             this.Descricao = descricao;
             this.Ano = ano;
             this.Excluido = false;
@@ -40,9 +40,14 @@ namespace DIO.Series
             return this.Titulo;
         }
 
-        internal int retornaI()
+        internal int retornaId()
         {
             return this.Id;
         }
-    
+
+        public void Excluir()
+        {
+            this.Excluido = true;
+        }
+    }
 }
